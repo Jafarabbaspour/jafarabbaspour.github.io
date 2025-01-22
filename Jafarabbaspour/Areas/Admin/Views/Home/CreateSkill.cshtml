@@ -1,0 +1,60 @@
+﻿@model Jafarabbaspour.Models.Skill
+
+<div class="col-12">
+    <div class="row">
+        <div class="card accordion-item">
+            <h2 class="accordion-header" id="headingDeliveryAddress">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDeliveryAddress" aria-expanded="true" aria-controls="collapseDeliveryAddress">
+                </button>
+            </h2>
+            <form asp-action="CreateSkill">
+                <div id="collapseDeliveryAddress" class="accordion-collapse collapse show" aria-labelledby="headingDeliveryAddress" data-bs-parent="#collapsibleSection">
+                    <div class="accordion-body">
+                        <div class="row g-3 p-3">
+
+                            <div class="col-md-5">
+                                <div class="row">
+                                    <label class="col-sm-3 col-form-label text-sm-end" >Title</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" asp-for="Title" class="form-control " >
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="row">
+                                    <label class="col-sm-4 col-form-label text-sm-end" >Percent</label>
+                                    <div class="col-sm-8">
+                                        <input type="number" asp-for="Percent" class="form-control" >
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="row">
+
+                                    <label class="col-sm-4 col-form-label text-sm-end">Skill level</label>
+                                    <div class="position-relative col-8">
+                                        <select asp-for="SkillLevel" class="select2  form-select select2-hidden-accessible" data-allow-clear="true" data-select2-id="multicol-country" tabindex="-1" aria-hidden="true">
+                                            @foreach (var item in Enum.GetValues(typeof(SkillLevel)))
+                                            {
+                                                <option value="@item">@item</option>
+                                            }
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="m-2 text-end">
+                                <button type="submit" class="btn btn-success"> Submit</button>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </form>
+
+        </div>
+
+    </div>
+</div>

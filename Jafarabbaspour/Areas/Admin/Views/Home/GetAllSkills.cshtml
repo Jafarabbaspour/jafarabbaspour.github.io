@@ -1,0 +1,55 @@
+﻿@model System.Collections.Generic.List<Jafarabbaspour.Models.Skill>
+
+
+<div class="card">
+    <h5 class="card-header">List</h5>
+    <div class="table-responsive text-nowrap">
+        @if (Model is not null && Model.Any())
+        {
+            <table class="table mb-5">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Percent</th>
+                        <th>Skill level</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody class="table-border-bottom-0">
+
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td> <strong>@item.Title</strong></td>
+                            <td>
+                                <strong>@item.Percent</strong>
+                            </td>
+                            <td>
+                                <strong>@item.SkillLevel</strong>
+                            </td>
+
+                            <td>
+                                <div class="dropdown">
+                                    <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
+                                        <i class="bx bx-dots-vertical-rounded"></i>
+                                    </button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" asp-action="UpdateSkill" asp-route-id="@item.Id" ><i class="bx bx-edit-alt me-1"></i> Edit</a>
+                                        <a class="dropdown-item" asp-action="DeleteSkill" asp-route-id="@item.Id"><i class="bx bx-trash me-1"></i> Delete</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+
+
+
+                </tbody>
+            </table>
+        }
+        else
+        {
+            <div class="alert alert-info m-5"> there is no data !</div>
+        }
+    </div>
+</div>
