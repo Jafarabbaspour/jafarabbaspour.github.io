@@ -1,0 +1,45 @@
+h3.timeline-title {
+    font-size: 1.7rem;
+    margin-bottom: 2.5rem;
+    font-weight: 600;
+}
+.timeline {
+    line-height: 1.4em;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.timeline-item {
+    padding-left: 40px;
+    position: relative;
+}
+ .timeline-marker:before{
+    background: #e6a100;
+    border: 3px solid transparent;
+    border-radius: 100%;
+    content: "";
+    display: block;
+    height: 15px;
+    position: absolute;
+    top: 4px;
+    left: 0;
+    width: 15px;
+    transition: 0.3s ease-in-out, border 0.3s ease-in-out;
+  }
+  .timeline-marker:after {
+    content: "";
+    width: 3px;
+    background: #CCD5DB;
+    display: block;
+    position: absolute;
+    top: 24px;
+    bottom: 0;
+    left: 6px;
+}
+ .timeline-content {
+    padding-bottom: 40px;
+}
+.fxt-portfolio-box-layout1 .item-img img{
+    border: 1px solid #dfdbdb;
+}
