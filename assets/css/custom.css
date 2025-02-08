@@ -43,3 +43,10 @@ h3.timeline-title {
 .fxt-portfolio-box-layout1 .item-img img{
     border: 1px solid #dfdbdb;
 }
+.contact-icon{
+ margin-left: 0.6rem;   
+}
+
+.fa-mobile-alt{
+    margin-right: 0.2rem;
+}
